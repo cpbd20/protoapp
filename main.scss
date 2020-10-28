@@ -1,0 +1,495 @@
+
+$theme-colors: (
+    // "primary": #0074d9,
+    "primary": #2248e2,
+    "danger": #ff4136,
+    "warning": #ffc107,
+    "teal" : #17a2b8
+  );
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1300px
+);
+
+$body-bg: #ffffff;
+$body-color: #212529;
+
+
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// @import "node_modules/bootstrap/scss/functions";
+// @import "node_modules/bootstrap/scss/variables";
+// @import "node_modules/bootstrap/scss/mixins";
+
+// @import "node_modules/bootstrap/scss/reboot";
+// @import "node_modules/bootstrap/scss/navbar";
+// @import "node_modules/bootstrap/scss/grid";
+// @import "node_modules/bootstrap/scss/buttons";
+// @import "node_modules/bootstrap/scss/type";
+// @import "node_modules/bootstrap/scss/images";
+// @import "node_modules/bootstrap/scss/code";
+
+.theme_badge{
+    text-transform: uppercase;
+    padding:10px;
+    border-radius: 3rem;
+    background-color: rgba(0,0,0,0.3) ;
+}
+.theme_badge_text{
+    color:white;
+    font-weight: bold;
+}
+
+.wrapper{
+    background: url('assets/img/bg-leaves.svg'), url('assets/img/bg-decals.svg');
+    background-size: 1700px 100%, 1650px 380px;
+    background-position: top -60px right, bottom left -100px;
+    background-repeat: no-repeat, no-repeat;
+    height: 700px;
+}
+h1{
+    font-size: 60px;
+    font-weight: lighter;
+}
+h2{
+    font-size: 50px;
+}
+h3{
+    font-size: 40px;
+    font-weight: 700;
+}
+p{
+    font-size: 22px;
+    color: #414244;
+    font-weight: lighter;
+}
+.landing {
+    p{
+        font-size: 22px;
+        color: #414244;
+        font-weight: lighter;
+        max-width: 500px;
+        width:100%;
+    }
+}
+.row{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.leaves{
+    background: url('assets/img/bg-decals2.svg');
+    background-position: top -50px right;
+    background-repeat: no-repeat;
+    padding:185px; 
+    margin-bottom:70px;
+}
+.section-lefted-row{
+    p{
+        max-width:420px;
+        width:100%;
+    }
+}
+
+
+
+
+.promotion_section{
+    width:1270px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 0px;
+    div:first-child{
+        margin-right: 30px;
+    }
+}
+.promotion_card{
+    border-radius:25px;
+    padding: 30px;
+    width:600px;
+    line-height: 1.6;
+}
+.promotion-image{
+    float:left;
+    text-align: center;
+    img{
+        margin-bottom: 50px;
+    }
+}
+.promotion-description{
+    color:white;
+    p{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    h4{
+        font-size: 35px;
+    }
+}
+.promotion{
+    /* background:red; */
+    height: 850px;
+    background: url('assets/img/bg-decals3.svg');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+.promotion_mobile_view{
+    display:none;
+}
+
+@media (max-width: 799px){
+    .promotion{
+        display:none;
+        // background:red;
+        background: url('assets/img/bg-decals3.svg');
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+    .promotion_mobile_view{
+        display:block;
+        height: 850px;
+        background: url('assets/img/bg-decals3.svg');
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+    .promotion_section_mobile{
+        padding:20px;
+        color:white;
+        width:100%;
+        margin:auto;
+        display: grid;
+        grid-auto-rows:300px;
+        div:nth-child(2){
+            margin-top: 30px;
+        }
+    }
+    .promotion_card_mobile{
+        height: 300px;
+        border-radius: 25px;
+        padding:30px;
+        .promotion-image_mobile{
+            float:left;
+            margin-right:20px;
+            text-align: center;
+            img{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .promotion-description_mobile{
+        color:white;
+        p{
+            margin-top: -25px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        h4{
+            font-size: 20px;
+        }
+    }
+
+}
+@media (max-width: 399px){
+    .promotion_card_mobile{
+        height: 320px;
+        border-radius: 25px;
+        padding:30px;
+        .promotion-image_mobile{
+            float:left;
+            margin-right:20px;
+            text-align: center;
+            img{
+                height: 100px;
+                width: 100px;
+                margin-bottom: 20px;
+            }
+            .theme_badge{
+                font-size: 10px;
+            }
+        }
+    }
+    .promotion-description_mobile{
+        // background-color: red;
+        padding-top:0px;
+        color:white;
+        p{
+            margin-top: -25px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 2;
+        }
+        h4{
+            font-size: 20px;
+        }
+    }
+
+}
+@media (min-width: 400px) and (max-width: 650px){
+    .promotion_card_mobile{
+        height: 250px;
+        border-radius: 25px;
+        padding:30px;
+        .promotion-image_mobile{
+            float:left;
+            margin-right:20px;
+            text-align: center;
+            img{
+                height: 100px;
+                width: 100px;
+                margin-bottom: 20px;
+            }
+            .theme_badge{
+                font-size: 10px;
+            }
+        }
+    }
+    .promotion-description_mobile{
+        // background-color: red;
+        padding-top:0px;
+        color:white;
+        p{
+            margin-top: -25px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 2;
+        }
+        h4{
+            font-size: 20px;
+        }
+    }
+}
+@media (min-width: 800px) and (max-width: 1270px){
+    .promotion{
+        height: 600px !important;
+        background: url('assets/img/bg-decals3.svg');
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+    .promotion_section{
+        width:800px;
+        margin:auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 60px 0px;
+        div:first-child{
+            margin-right: 30px;
+        }
+    }
+    .promotion_card{
+        border-radius:25px;
+        padding: 30px;
+        width:380px;
+        line-height: 1.6;
+        span{
+            font-size:15px;
+        }
+    }
+    .promotion-image{
+        float:left;
+        text-align: center;
+        img{
+            width:100px;
+            height:100px;
+            margin-bottom: 20px;
+        }
+        .theme_badge{
+            font-size: 10px;
+        }
+    }
+    .promotion-description{
+        // background-color: red;
+        color:white;
+        p{
+            margin-top: -25px;
+            font-size: 11px;
+            font-weight: 400;
+        }
+        h4{
+            font-size: 15px;
+        }
+    }
+    .promotion{
+        /* background:red; */
+        height: 850px;
+        background: url('assets/img/bg-decals3.svg');
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+.persuasive-buttons{
+    margin-top: 190px;
+    border-top:1px solid #f9fafb;
+    border-bottom:1px solid #f9fafb;
+    padding:30px;
+}
+.persuasive-buttons-2{
+    img:first-child{
+        margin-right: 20px;
+    }
+}
+section{
+    p{
+        color:black;
+        font-weight: 400;
+    }
+}
+.section_2{
+    margin-top:50px;
+    padding:50px;
+}
+
+
+@media (max-width: 480px) {
+    body{
+        // background: $primary;
+    }
+    .wrapper{
+        background: url('assets/img/bg-leaves.svg'), url('assets/img/bg-decals.svg');
+        background-size: 1700px 100%, 1650px 380px;
+        background-position: top -60px right -700px, bottom 250px left -150px;
+        background-repeat: no-repeat, no-repeat;
+        height: 700px;
+    }
+    .landing_button{
+        text-align:center;
+    }
+    h1{
+        text-align: center;
+        font-size: 40px;
+        font-weight: lighter;
+    }
+    .landing {
+        p{
+            text-align: center;
+            font-size: 20px;
+            color: #414244;
+            font-weight: lighter;
+        }  
+    }
+    .persuasive-buttons{
+        margin-top: 50px;
+        border-top:1px solid #f9fafb;
+        border-bottom:1px solid #f9fafb;
+        padding:0px;
+        img{
+            width:120px;
+        }
+    }
+    .section_2{
+        margin-top:0;
+        padding:10px;
+    }
+    h2, h3{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
+    .leaves{
+        background: url('assets/img/bg-decals2.svg');
+        background-position: top -50px right;
+        background-repeat: no-repeat;
+        padding: 100px 10px 100px 10px; 
+        margin-bottom:70px;
+    }
+    .persuasive-buttons-2{
+        img:first-child{
+            margin-right: 10px;
+        }
+        img{
+            width:100px;
+        }
+    }
+  }
+
+
+
+
+
+
+
+
+
+@media (min-width: 481px)  and (max-width: 768px) {
+    body{
+        // background: $secondary;
+    }
+    h1{
+        font-size: 50px;
+        font-weight: lighter;
+    }
+    .wrapper{   
+        background: url('assets/img/bg-leaves.svg'), url('assets/img/bg-decals.svg');
+        background-size: 1700px 100%, 1650px 380px;
+        background-position: top -60px right -600px, bottom 120px left -150px;
+        background-repeat: no-repeat, no-repeat;
+        height: 700px;
+    }
+    .landing {
+        p{
+            font-size: 14px;
+            color: #414244;
+            font-weight: lighter;
+        }
+    }
+    .persuasive-buttons{
+        margin-top: 90px;
+        border-top:1px solid #f9fafb;
+        border-bottom:1px solid #f9fafb;
+        padding:0px;
+    }
+    .section_2{
+        margin-top:0;
+        padding:10px;
+    }
+    .leaves{
+        background: url('assets/img/bg-decals2.svg');
+        background-position: top -50px right;
+        background-repeat: no-repeat;
+        padding: 100px 10px 100px 10px; 
+        margin-bottom:70px;
+    }
+}
+
+
+
+
+@media (min-width: 769px)  and (max-width: 1024px) {
+    body{
+        // background: red;
+    }
+    h1{
+        font-size: 40px;
+        font-weight: lighter;
+    }
+    .landing {
+        p{
+            font-size: 18px;
+            color: #414244;
+            font-weight: lighter;
+        }
+    }
+    .wrapper{   
+        background: url('assets/img/bg-leaves.svg'), url('assets/img/bg-decals.svg');
+        background-size: 1700px 100%, 1650px 380px;
+        background-position: top -60px right -450px, bottom 120px left -120px;
+        background-repeat: no-repeat, no-repeat;
+        height: 700px;
+    }
+}
+@media (min-width: 1025px)  and (max-width: 1200px) {
+    body{
+        // background: yellow;
+    }
+}
